@@ -26,7 +26,7 @@ void fontdisp2(uint8_t* buf) {
   Serial.print("x");      
   Serial.print(SDSfonts.getHeight(),DEC);            // フォントの高さの取得
   Serial.print(" ");      
-  Serial.println((uint16_t)SDSfonts.getCode(), HEX); // 直前し処理したフォントのUTF16コード表示
+  Serial.println((uint16_t)SDSfonts.getCode(), HEX); // 直前し処理したフォントのコード表示
 
   for (uint8_t i = 0; i < SDSfonts.getLength(); i += bn ) {
       for (uint8_t j = 0; j < bn; j++) {
