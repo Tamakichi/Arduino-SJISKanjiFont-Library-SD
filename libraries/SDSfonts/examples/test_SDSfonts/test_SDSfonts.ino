@@ -1,5 +1,6 @@
 // SJIS版フォントライブラリ利用サンプル
 // 作成 2018/10/27  by Tamakichi
+// 修正 2018/11/07  by Tamakichi
 //
 
 #include "SDSfonts.h"
@@ -53,7 +54,8 @@ void fontDump(char* pSJIS, uint8_t sz) {
 }
 
 void setup() {
-  Serial.begin(115200);                   // シリアル通信の初期化
+  Serial.begin(115200);                     // シリアル通信の初期化
+  while(!Serial); 
   SDSfonts.init(10);                        // フォント管理の初期化
   Serial.println(F("sdfonts liblary"));
   char str[] = {0x7a,0x7b,0x7c,0x7d,0x7e,0xa2,0xb1,0xb2,0xb3,0};// z{|}~｢ｱｲｳ
